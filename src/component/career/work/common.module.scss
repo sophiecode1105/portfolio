@@ -1,0 +1,177 @@
+.container {
+    background-color: #121212;
+    margin: 0;
+    font-family: 'SF UI Text', sans-serif;
+    /* padding-left: 170px; */
+}
+
+.alignment {
+    display: flex;
+}
+
+.left_box {
+    flex: 1.5;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+}
+
+.right_box {
+    flex: 2;
+    background-color: #ece7e1;
+    position: sticky;
+    height: 100vh;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel_wrap {
+    width: 95%;
+}
+.title_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 7vh;
+  }
+
+  .project_title {
+    font-size: 50px;
+    font-family: "Druk Wide Web Bold Regular";
+    padding-top: 5vh;
+    text-align: center;
+
+  }
+
+  .project_purpose {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .project_purpose>span:nth-child(1) {
+    margin-top: 30px;
+  }
+
+
+
+.desc_box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+}
+
+.desc_1 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-weight: 500;
+
+
+}
+
+.emphasis {
+    color: #CCF381;
+    font-weight: bold;
+}
+
+.emphasis>li {
+    font-weight: 400;
+    color: #fff;
+   
+}
+
+.emphasis>li > span {
+    color: #CCF381;
+    font-weight: bold;
+}
+
+.desc_detail {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    list-style-position: inside;
+
+    padding: 0;
+    margin: 15px 0 0 0;
+}
+
+.desc_detail>div>li {
+    padding-left: 20px;
+    line-height: 28px;
+
+}
+
+.normal {
+    cursor: pointer;
+}
+
+.button {
+    all: unset;
+    color: #121212;
+    padding: 10px;
+    border-radius: 10px 12px;
+    background-color: #EEEEEE;
+    cursor: pointer;
+    width: max-content;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.link_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.link_wrapper >div:nth-child(1) {
+    font-weight: bold;
+    font-size: 16px;
+    color: #121212;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+}
+
+.link_icon {
+    width: auto;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.history_wrap > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.desc_box {
+ animation: fadein 1s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+

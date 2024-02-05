@@ -1,0 +1,86 @@
+@import '../../responsive.scss';
+
+.home_container {
+    background-color: #4831d4;
+    display: flex;
+    min-height: calc(100vh - 150px);
+}
+
+.project_wrapper {
+    flex: 2;
+  }
+  
+.paragraph {
+      flex: 1;
+      padding-left: 70px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding-bottom: 200px;
+      gap: 8px;
+      color: #fff;
+      font-size: 30px;
+      font-weight: bold;
+      min-width: 300px;
+  
+}
+  
+  
+.margin_top {
+      margin-top: 20px;
+}
+  
+.project_list {
+      font-family: "Druk Wide Web Bold Regular";
+      padding-right: 2rem;
+      text-align: right;
+      list-style: none;
+      perspective: 500px;
+      animation: falling 3s ease-out;
+
+    }
+  
+    @keyframes falling {
+      0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-80px);
+      }
+      100% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+    }
+    
+    .project {
+      font-size: 6.2vw;
+      transform: rotateY(-25deg);
+      transform-origin: right center;
+      transition: transform 0.3s ease-out;
+    }
+    
+    .project > div {
+      transition: -webkit-text-fill-color 0.3s ease-out;
+      line-height: 1;
+      font-weight: 900;
+      -webkit-text-stroke: 2px;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 20px 0;
+      cursor: pointer;
+    }
+    
+    .project:hover {
+      transform: rotateY(-15deg);
+    }
+  
+    .project.active {
+      transform: rotateY(0);
+      /* 다른 스타일 규칙들 */
+    }
+  
+   
+    .project:hover > div {
+      -webkit-text-fill-color: transparent;
+    }

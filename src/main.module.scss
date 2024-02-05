@@ -1,0 +1,116 @@
+@import './responsive.scss';
+
+.main {
+    position: relative;
+}
+
+.nav {
+    font-family: "Druk Wide Web Bold Regular";
+    position: sticky;
+    width: 100%;
+    height: 0px;
+    top: 0px;
+
+    font-weight: bold;
+    font-size: 35px;
+    z-index: 1;
+    color: #fff;
+
+    @media all and (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+        font-size: 35px;
+    }
+
+    @media only screen and (max-width: $mobile-max-width) {
+        font-size: 25px;
+    }
+}
+
+.nav_list {
+    display: flex;
+    font-size: 20px;
+    gap: 10px;
+}
+
+.color1 {
+    color: #4831d4;
+}
+
+.color2 {
+    color: #fff !important;
+}
+
+.logo_hide {
+    visibility: hidden;
+}
+
+.nav > div {
+    padding: 10px 70px;
+    display: flex;
+    justify-content: space-between;
+
+    @media all and (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+        padding: 10px 40px;
+     }
+ 
+     @media only screen and (max-width: $mobile-max-width) {
+        padding: 10px 20px;
+     }
+}
+
+.ani1 {
+    animation: fadeInAnimation ease 2s;
+    animation-delay: 1.5s;
+}
+
+.ani2 {
+    animation: fadeInAnimation ease 2s;
+    animation-delay: 2s;
+}
+
+
+.nav_logo_wrapper {
+    display: flex;
+    flex-direction: column;
+  
+    transition: all 0.3s;
+    cursor: pointer;
+   
+}
+
+.nav_logo_wrapper:hover {
+     -webkit-text-stroke: 2px;
+    -webkit-text-fill-color: transparent;
+}
+
+  @keyframes fadeInAnimation {
+      0% {
+          opacity: 0;
+          transform: translateY(20px);
+  
+      }
+  
+      100% {
+          opacity: 1;
+          transform: translateY(0%);
+      }
+  }
+
+  .opacityZero {
+    opacity: 0;
+  }
+
+  .animation_play {
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+}
+
+@keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }

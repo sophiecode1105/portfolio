@@ -1,0 +1,217 @@
+
+.container {
+    background-color: #f7f7f7;
+    /* font-weight: bold; */
+    padding: 0 170px;
+    font-family: 'SF UI Text', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.page_title {
+    position: relative;
+    color: #4831d4;
+    font-size: 44px;
+    font-weight: 900;
+  
+}
+
+.type_wrapper {
+    display: grid;
+    place-items: left;
+    min-height: 30px;
+}
+
+.animation_play {
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+}
+
+.typing_container {
+    width: 9.5ch;
+
+    white-space: nowrap;
+    overflow: hidden;
+    /* border-right: 5px solid #212121; */
+    font-size: 40px;
+}
+
+@keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+
+.about_contents {
+    display: flex;
+    gap: 50px;
+    padding: 20px;
+    height: max-content;
+}
+
+.contents1{
+    flex:1;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    
+}
+
+.contents1> div {
+   
+    height: 300px;
+    width:  300px;
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.contents2{
+    flex: 3;
+    display: flex;
+    gap: 40px;
+
+    /* color: #3d155f; */
+}
+
+.myphoto {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}
+
+.details2_title,
+.job {
+    color: #4831d4;
+    font-weight: 800;
+    font-size: 30px;
+}
+
+.short_info {
+    color:  #121212;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bluecolor {
+    position: relative;
+    color: #CCF381;
+    /* color : rgb(211,0,39); */
+    font-weight: 600;
+    /* text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000; */
+}
+
+.bluecolor::after {
+    content: "React";
+    position: absolute;
+    color: #4831d4;
+    top: -0.2rem;
+    left: -0.2rem;
+}
+
+
+.redcolor {
+    position: relative;
+    color: #CCF381;
+    /* color : rgb(211,0,39); */
+    font-weight: 600;
+    /* text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000; */
+}   
+
+.redcolor::after {
+    content: "Angular";
+    position: absolute;
+    color: #4831d4;
+    top: -0.2rem;
+    left: -0.2rem;
+}
+
+.contents2_detail1{
+    flex: 1;
+
+}
+
+.contents2_detail2{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+ 
+}
+
+.personal_info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.icon_box {
+    background-color: #CCF381;
+    min-width: 65px;
+    min-height: 65px;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon_box > img {
+    width: 50%;
+    height: 50%;
+}
+
+.personal_info>div {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.personal_details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.personal_details > button {
+    all: unset;
+    background-color:  #4831d4;
+    width: max-content;
+    padding: 10px 15px;
+    color: #CCF381;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.skills>div:nth-child(1) {
+    margin: 40px 0 20px 0;
+    color: #4831d4;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.skills_list {
+    list-style: none;
+    margin: 0;
+    padding:0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.skills_list >li {
+    display: flex;
+    gap: 3px;
+}
+
+.personal_label {
+ font-weight: bold;
+}

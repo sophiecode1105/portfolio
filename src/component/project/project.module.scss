@@ -1,0 +1,77 @@
+.container {
+    min-height:100vh;
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    overflow: hidden;
+    font-family: 'SF UI Text', sans-serif;
+}
+
+.container_name {
+    font-size: 3vw;
+    font-weight: 900;
+    font-family: 'SF UI Text', sans-serif;
+    margin-bottom: 30px;
+}
+
+.project_alignment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 1px solid red; */
+    border: 1px solid #f6f6f6;
+
+    border-radius: 15px;
+    width: 70%;
+    height: 100%;
+    padding: 40px;
+    gap: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 90%;
+}
+
+.project_card {
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid green; */
+}
+
+.project_card >div {
+   flex:1;
+
+}
+
+.project_period {
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.project_card >div:nth-child(even){
+    /* border: 1px solid yellow; */
+}
+
+.project_name {
+    font-family: "Druk Wide Web Bold Regular";
+    font-size: 2.5vw;
+}
+
+.project_name:hover {
+    color: #CCF381;
+    cursor: pointer;
+}
+
+.project_name >div {
+    display: flex;
+    align-items: flex-end
+}
+
+
+.project_stack {
+    font-size: 1.5vw;
+    line-height: 2vw;
+}
