@@ -5,15 +5,19 @@ function Home({
   homeContainerRef,
   aboutContainerRef,
   careerContainerRef,
+  projectContainerRef,
+  contactContainerRef,
 }: {
   homeContainerRef: RefObject<HTMLDivElement>;
   aboutContainerRef: RefObject<HTMLDivElement>;
   careerContainerRef: RefObject<HTMLDivElement>;
+  projectContainerRef: RefObject<HTMLDivElement>;
+  contactContainerRef: RefObject<HTMLDivElement>;
 }) {
   const aboutRef = useRef<HTMLLIElement>(null);
   const careerRef = useRef<HTMLLIElement>(null);
-  const skillsRef = useRef<HTMLLIElement>(null);
   const projectRef = useRef<HTMLLIElement>(null);
+  const contactRef = useRef<HTMLLIElement>(null);
 
   const scrollTo = (ref: RefObject<HTMLDivElement>) => {
     const top = ref.current?.offsetTop;
@@ -69,10 +73,22 @@ function Home({
               EXPERIENCE
             </div>
           </li>
-          <li className={styles.project}>
+          <li
+            className={styles.project}
+            ref={projectRef}
+            onClick={() => {
+              addAndRemoveAnimation(projectRef, projectContainerRef);
+            }}
+          >
             <div>Project</div>
           </li>
-          <li className={styles.project}>
+          <li
+            className={styles.project}
+            ref={contactRef}
+            onClick={() => {
+              addAndRemoveAnimation(contactRef, contactContainerRef);
+            }}
+          >
             <div>Contact</div>
           </li>
         </ul>

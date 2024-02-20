@@ -1,3 +1,5 @@
+@import '../../../responsive.scss';
+
 .container {
     background-color: #121212;
     margin: 0;
@@ -7,6 +9,10 @@
 
 .alignment {
     display: flex;
+     
+    @media all and (max-width: $tablet-max-width) {
+        flex-direction: column-reverse;
+    }
 }
 
 .left_box {
@@ -17,6 +23,7 @@
     align-items: center;
     position: relative;
     padding: 20px;
+    
 }
 
 .right_box {
@@ -25,10 +32,14 @@
     position: sticky;
     height: 100vh;
     top: 0;
-
     display: flex;
     align-items: center;
     justify-content: center;
+
+   
+    // @media all and (max-width: $tablet-max-width) {
+    //     position: static;
+    // }
 }
 
 .carousel_wrap {
@@ -116,43 +127,31 @@
 }
 
 .button {
-    all: unset;
-    color: #121212;
-    padding: 10px;
-    border-radius: 10px 12px;
-    background-color: #EEEEEE;
-    cursor: pointer;
+    background-color:  #4831d4;
     width: max-content;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 10px 15px;
+    color: #CCF381;
+    cursor: pointer;
+    border-radius: 10px;
 }
 
 .link_wrapper {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+    color: #fff;
+    gap: 5px;
 
 }
 
 .link_wrapper >div:nth-child(1) {
-    font-weight: bold;
-    font-size: 16px;
-    color: #121212;
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
     width: max-content;
-}
-
-.link_icon {
-    width: auto;
-    height: 20px;
     margin-right: 10px;
 }
+
+
 
 .history_wrap > div:nth-child(2) {
     display: flex;

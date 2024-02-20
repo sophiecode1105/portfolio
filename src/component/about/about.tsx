@@ -1,6 +1,7 @@
 import { RefObject } from "react";
 import styles from "./about.module.scss";
 import avartar from "../../assets/avartar.png";
+import avartar2 from "../../assets/avartar2.png";
 import user_icon from "../../assets/user.png";
 import phone_icon from "../../assets/phone.png";
 import email_icon from "../../assets/email.png";
@@ -22,15 +23,17 @@ function About({
         </div>
       </div>
       <div className={styles.about_contents}>
-        <div className={styles.contents1}>
-          <div style={{ backgroundImage: `url(${avartar})` }}></div>
-        </div>
         <div className={styles.contents2}>
           <div className={styles.contents2_detail1}>
             <div className={styles.job}>
-              FRONTEND
-              <br />
-              DEVELOPER
+              <div>
+                FRONTEND
+                <br />
+                DEVELOPER
+              </div>
+              <div className={styles.contents1}>
+                <div style={{ backgroundImage: `url(${avartar2})` }}></div>
+              </div>
             </div>
             <div className={styles.short_info}>
               <span>안녕하세요.</span>
@@ -46,6 +49,11 @@ function About({
               </span>
               <span>
                 최신 기술과 트렌드를 주시하며 지속적인 발전에 노력하고 있습니다.
+              </span>
+              <span>최근에는 새롭게 출시한 Next.js 13을 학습하여,</span>
+              <span>
+                Next.js의 강점인 SEO 최적화, 간편한 라우팅등을 활용하여
+                프로젝트를 진행하고 있습니다.
               </span>
             </div>
             <div className={styles.skills}>
@@ -115,17 +123,31 @@ function About({
                 <div className={styles.icon_box}>
                   <img src={github_icon} alt="github_icon" />
                 </div>
-                <div className={styles.personal_details}>
-                  <button>GITHUB</button>
-                </div>
+                <a
+                  style={{ textDecoration: "none", color: "inherit" }}
+                  href="https://github.com/sophiecode1105"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <div className={styles.personal_details}>
+                    <button>GITHUB</button>
+                  </div>
+                </a>
               </div>
               <div>
                 <div className={styles.icon_box}>
                   <img src={blog_icon} alt="blog_icon" />
                 </div>
-                <div className={styles.personal_details}>
-                  <button>BLOG</button>
-                </div>
+                <a
+                  style={{ textDecoration: "none", color: "inherit" }}
+                  href="https://developeritchaeyachae.tistory.com/"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <div className={styles.personal_details}>
+                    <button>BLOG</button>
+                  </div>
+                </a>
               </div>
             </div>
           </div>

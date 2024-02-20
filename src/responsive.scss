@@ -5,3 +5,19 @@ $mobile-max-width: 580px;
 $tablet-min-width: 581px;
 $tablet-max-width: 1024px;
 $desktop-max-width: 1420px;
+
+@function setSize($number: 1) {
+    @return calc(($number * 100vw) / $standard-mobile-width)
+}
+
+;
+
+@function setTabletSize($number: 1) {
+    @return calc(($number * 100vw) / $standard-tablet-width)
+}
+
+;
+
+@function setDeskSize($number: 1) {
+    @return calc(($number * 100vw) / $standard-width)
+}

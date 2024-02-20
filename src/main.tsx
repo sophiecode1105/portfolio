@@ -1,10 +1,11 @@
-import React from "react";
+import React, { RefObject } from "react";
 import { useEffect, useRef } from "react";
 import styles from "./main.module.scss";
 import About from "./component/about/about";
 import Home from "./component/home/home";
 import Career from "./component/career/career";
 import Project from "./component/project/project";
+import Contact from "./component/contact/contact";
 
 function Main() {
   const navRef = useRef<HTMLDivElement>(null);
@@ -12,6 +13,8 @@ function Main() {
   const homeContainerRef = useRef<HTMLDivElement>(null);
   const aboutContainerRef = useRef<HTMLDivElement>(null);
   const careerContainerRef = useRef<HTMLDivElement>(null);
+  const projectContainerRef = useRef<HTMLDivElement>(null);
+  const contactContainerRef = useRef<HTMLDivElement>(null);
   const fakeRef = useRef<HTMLDivElement>(null);
   const hideRef1 = useRef<HTMLSpanElement>(null);
   const hideRef2 = useRef<HTMLSpanElement>(null);
@@ -25,6 +28,14 @@ function Main() {
     addIntersectionObserver();
     addIntersectionObserver2();
   }, []);
+
+  const scrollToTop = (ref: RefObject<HTMLDivElement>) => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
 
   const addIntersectionObserver = (): void => {
     const observer = new IntersectionObserver(
@@ -73,15 +84,22 @@ function Main() {
   };
 
   return (
-    <div className={styles.main}>
+    <div className={styles.main} ref={homeContainerRef}>
       <Home
         homeContainerRef={homeContainerRef}
         aboutContainerRef={aboutContainerRef}
         careerContainerRef={careerContainerRef}
+        projectContainerRef={projectContainerRef}
+        contactContainerRef={contactContainerRef}
       />
       <nav className={styles.nav} ref={navRef}>
         <div>
-          <div className={styles.nav_logo_wrapper}>
+          <div
+            className={styles.nav_logo_wrapper}
+            onClick={() => {
+              scrollToTop(homeContainerRef);
+            }}
+          >
             <span className={styles.ani1}>
               SO<span ref={hideRef1}>PHIE</span>
             </span>
@@ -97,7 +115,8 @@ function Main() {
       ></div>
       <About aboutContainerRef={aboutContainerRef} />
       <Career careerContainerRef={careerContainerRef} />
-      <Project />
+      <Project projectContainerRef={projectContainerRef} />
+      <Contact contactContainerRef={contactContainerRef} />
     </div>
   );
 }

@@ -9,22 +9,7 @@
 .project_wrapper {
     flex: 2;
   }
-  
-.paragraph {
-      flex: 1;
-      padding-left: 70px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding-bottom: 200px;
-      gap: 8px;
-      color: #fff;
-      font-size: 30px;
-      font-weight: bold;
-      min-width: 300px;
-  
-}
-  
+    
   
 .margin_top {
       margin-top: 20px;
@@ -38,7 +23,12 @@
       perspective: 500px;
       animation: falling 3s ease-out;
 
+      @media only screen and (max-width: $mobile-max-width) {
+       padding-top: 50px;
+        }
     }
+
+
   
     @keyframes falling {
       0% {
@@ -58,6 +48,14 @@
       transform: rotateY(-25deg);
       transform-origin: right center;
       transition: transform 0.3s ease-out;
+
+      @media all and (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+        font-size: 75px;
+    }
+
+    @media only screen and (max-width: $mobile-max-width) {
+        font-size: 33px;
+    }
     }
     
     .project > div {

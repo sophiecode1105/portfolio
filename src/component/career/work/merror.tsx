@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./common.module.scss";
 import Carousel from "../../common/carousel";
+import link_icon from "../../../assets/link.png";
 
 function Merror() {
   const leftContainerRef = useRef<HTMLDivElement>(null);
@@ -45,31 +46,28 @@ function Merror() {
               </span>
               <span>사용스택: Angular TS</span>
               <div className={styles.link_wrapper}>
-                {/* <div>
-                  <Image
-                    className={styles.link_icon}
-                    src={link_icon}
-                    alt="link_icon"
-                  />
-                  <span>미러 관련 링크</span>
+                <div>
+                  <span>미러 관련 링크 :</span>
                 </div>
-                <Link
+                <a
                   style={{ textDecoration: "none", color: "inherit" }}
                   href="https://me-rror.com/ko/"
+                  rel="noreferrer"
                   target="_blank"
                 >
                   <div className={styles.button}>미러 홈페이지</div>
-                </Link>
+                </a>
 
-                <Link
+                <a
                   style={{ textDecoration: "none", color: "inherit" }}
                   href="https://www.issuenbiz.com/news/articleView.html?idxno=19309"
+                  rel="noreferrer"
                   target="_blank"
                 >
                   <div className={styles.button}>
                     리뉴얼 전 플랫폼 오픈 기사
                   </div>
-                </Link> */}
+                </a>
               </div>
             </div>
             <ul className={styles.desc_detail}>

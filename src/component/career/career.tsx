@@ -13,7 +13,7 @@ function Career({
       <div>
         <div className={styles.alignment}>
           <div className={styles.left_box}>
-            <h1 className={styles.page_title}>WOKR EXPERIENCE</h1>
+            <h1 className={styles.page_title}>WORK EXPERIENCE</h1>
             <p className={styles.page_desc}>
               <span>(주) 브릴라</span>
               <span className={styles.margin_top}>
@@ -24,7 +24,6 @@ function Career({
                 웹 서비스 프론트엔드 설계, 개발, 운영 경험
               </span>
               <span>다양한 직군과의 협업 경험</span>
-              <span>스프린트식 타임라인에 맞춤?</span>
             </p>
           </div>
           <div className={styles.right_box}>
@@ -61,7 +60,6 @@ function Career({
           </div>
         </div>
       </div>
-      <div className={styles.test}>엥</div>
     </div>
   );
 }
